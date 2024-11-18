@@ -1,23 +1,20 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import logo from "../assets/imgs/logo.png";
 const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
-
-  const isInDescription = location.pathname === "/description";
+  const { bookkey } = useParams();
+  const isInDescription = location.pathname === `/description/works/${bookkey}`;
 
   const navigateTo = (path: string) => {
     navigate(path);
   };
   return (
     <>
-      <nav className="flex items-center justify-between p-4">
+      <nav className="flex items-center justify-between p-4 border-b-2 ">
         <div>
           {isInDescription ? (
-            <button
-              className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-              onClick={() => navigateTo("/")}
-            >
+            <button className="customButton" onClick={() => navigateTo("/")}>
               Home
             </button>
           ) : null}
