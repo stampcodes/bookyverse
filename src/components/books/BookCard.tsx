@@ -30,7 +30,7 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
             className="w-[300px] h-[400px] bg-cover bg-center rounded-lg "
           />
         )}
-        {book.cover_id ? (
+        {book.cover_id && (
           <img
             src={`https://covers.openlibrary.org/b/id/${book.cover_id}-L.jpg`}
             alt={book.title}
@@ -38,10 +38,6 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
             style={{ display: isLoading ? "none" : "block" }}
             className="w-[300px] h-[400px] rounded-lg flex mx-auto self-end"
           />
-        ) : (
-          <div className="w-[300px] h-[400px] rounded-lg bg-red-500 text-black flex justify-center items-center">
-            No cover found
-          </div>
         )}
       </Link>
     </article>
