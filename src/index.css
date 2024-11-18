@@ -1,3 +1,77 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Host", sans-serif;
+}
+
+@font-face {
+  font-family: "Edu";
+  src: url("./assets/fonts/EduAUVICWANTPre-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Host";
+  src: url("./assets/fonts/HostGrotesk-Regular.ttf") format("truetype");
+}
+.dates {
+  font-family: "Edu", sans-serif;
+}
+
+/* ----------- SCROLL BAR -------------*/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2c2c2c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b5b2ac;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b5b2ac;
+}
+
+::selection {
+  background-color: #ffffff;
+  color: #42352f;
+}
+
+.bgAll {
+  background-image: url("./assets/imgs/bg.webp");
+  height: auto;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.customButton {
+  background-color: #42352f;
+  font-weight: 800;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 15px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card {
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
