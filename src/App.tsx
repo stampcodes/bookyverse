@@ -7,7 +7,10 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/description" element={<DescriptionPage />} />
+          <Route
+            path="/description/works/:bookkey"
+            element={<DescriptionPage />}
+          />
         </Routes>
       </Router>
     </>
